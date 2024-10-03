@@ -1,0 +1,98 @@
+$lightGreen: #b9e7e7;
+.app{
+    display: flex;
+    justify-content: center;
+    .container{
+width: 1024px;
+       //Login  $ register
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+       .auth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+        height: 100vh;
+        background-color: $lightGreen;
+
+        h1{
+            font-size: 20px;
+            color: teal;
+            margin-bottom: 20px;
+        }
+        form{
+          display: flex;
+          flex-direction: column;  
+          padding: 20px;
+          background-color: white;
+          width: 250px;
+          gap: 20px;
+          
+          input{
+            padding: 10px ;
+            border: none;
+            border-bottom: 1px solid gray;
+          }
+          button{
+            padding:10px;
+            border: none;
+            background-color: teal;
+            cursor: pointer;
+            color: white;
+          }
+          span{
+            font-size: 12px;
+            text-align: center;
+          }
+          p{
+            font-size: 12px;
+            text-align: center;
+            color: red;
+          }
+        }
+       }
+       //Navbar
+.navbar{
+    .container{
+        padding: 10px 10px 50px;
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            width:5px;
+            height: 5px;
+        }
+        .logo img{
+            width: 40px;
+            height:55px;
+        }
+        .links {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            h6{
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+        .link{
+            padding-left: 20px;
+            padding-right: 30px;
+        }
+
+       
+.nav-links {
+   span{
+    padding-left: 20px;
+    padding-right: 30px;
+   }
+}
+    }
+}
+
+    }
+}
