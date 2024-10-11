@@ -12,7 +12,9 @@ import Register from './component/pages/Register';
 import Home from './component/pages/Home';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
-import './style.scss'
+import './style.scss';
+import './index.css';
+import Weatherapi from './component/tempApp/Weatherapi';
 function App() {
   const Layout = () => {
     return (
@@ -40,6 +42,10 @@ function App() {
           path: "/write",
           element: <Write />,
         },
+        {
+          path: '/weather',
+          element: <Weatherapi/>
+        }
       ]
     },
     {
