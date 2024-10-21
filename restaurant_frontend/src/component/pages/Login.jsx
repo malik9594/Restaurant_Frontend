@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+//https://www.youtube.com/watch?v=0aPLk2e2Z3g&t=3874s     (website link)
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../context/authContext';
 
 const Login = () => {
 
@@ -8,6 +10,8 @@ const Login = () => {
     password: "",
   });
 
+  const { login } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -15,20 +19,22 @@ const Login = () => {
     setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  // console.log(inputs);
+  // console.log(login);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inputs)
-      });
-      const data = await response.json();
-      console.log("Data on Submit button is:", data);
+      // const response = await fetch('http://localhost:3000/api/auth/login', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(inputs)
+      // });
+      await login(inputs)
+      // const data = await response.json();
+      // console.log("Data on Submit button is:", data);
       navigate('/');
     }
     catch (err) {
